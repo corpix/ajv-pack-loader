@@ -1,0 +1,16 @@
+{
+  "name": "ajv-pack-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^4.9.0",
+    "ajv-pack": "^0.2.7",
+    "require-from-string": "^1.2.1"
+  }
+}
