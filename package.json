@@ -11,6 +11,6 @@
   "dependencies": {
     "ajv": "^4.9.0",
     "ajv-pack": "^0.2.7",
-    "require-from-string": "^1.2.1"
+    "loader-utils": "^1.0.3"
   }
 }

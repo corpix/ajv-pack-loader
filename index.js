@@ -1,18 +1,16 @@
 'use strict';
 const Ajv = require('ajv');
 const pack = require('ajv-pack');
-const qs = require('querystring');
-const requireFromString = require('require-from-string');
+const loaderUtils = require('loader-utils');
 
 module.exports = function(source, sourceMap) {
     this.cacheable();
 
-    let query = JSON.parse(this.query.substr(1));
-    query.sourceCode = true;
+    const query = Object.assign({}, loaderUtils.getOptions(this), { sourceCode: true });
 
     const callback = this.async();
     const ajv = new Ajv(query);
-    let schema = ajv.compile(requireFromString(source));
+    const schema = ajv.compile(JSON.parse(source));
 
     callback(
         null,
