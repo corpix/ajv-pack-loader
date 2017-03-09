@@ -12,7 +12,7 @@ Add a loader into your webpack config:
     loaders: [
         {
             test: /\.?schema.json$/,
-            loader: 'ajv-pack'
+            loader: 'ajv-pack-loader'
         }
     ]
 }
