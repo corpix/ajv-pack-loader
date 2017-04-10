@@ -9,8 +9,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ajv": "^4.9.0",
+    "ajv": "^4.11.6",
     "ajv-pack": "^0.2.7",
     "require-from-string": "^1.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-no-console-log": "^2.0.0",
+    "webpack": "^2.3.3"
   }
 }
