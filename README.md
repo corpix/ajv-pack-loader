@@ -1,6 +1,8 @@
 ajv-pack-loader
 ---------------
 
+[![Build Status](https://travis-ci.org/corpix/ajv-pack-loader.svg?branch=master)](https://travis-ci.org/corpix/ajv-pack-loader)
+
 This is a webpack loader for [ajv-pack](https://github.com/epoberezkin/ajv-pack) that converts a JSON schema into JavaScript validation function.
 
 # Usage example
