@@ -11,7 +11,7 @@
   "dependencies": {
     "ajv": "^4.11.6",
     "ajv-pack": "^0.2.7",
-    "require-from-string": "^1.2.1"
+    "loader-utils": "^1.0.3"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
