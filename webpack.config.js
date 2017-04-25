@@ -26,7 +26,7 @@ module.exports = {
     entry: './sample.js',
     target: 'node',
     resolve: {extensions: ['.js', '.json']},
-    externals: getModules,
+    externals: getModules(),
     module: {
         loaders: [
             {
