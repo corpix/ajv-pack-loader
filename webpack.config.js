@@ -3,19 +3,22 @@ const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
 
-let nodeModules = {};
-fs
-    .readdirSync('node_modules')
-    .filter(
-        function(x) {
-            return ['.bin'].indexOf(x) === -1;
-        }
-    )
-    .forEach(
-        function(mod) {
-            nodeModules[mod] = 'commonjs ' + mod;
-        }
-    );
+const getModules = function() {
+    let modules = {};
+    fs
+        .readdirSync('node_modules')
+        .filter(
+            function(x) {
+                return ['.bin'].indexOf(x) === -1;
+            }
+        )
+        .forEach(
+            function(mod) {
+                modules[mod] = 'commonjs ' + mod;
+            }
+        );
+    return modules;
+};
 
 module.exports = {
     context: __dirname,
@@ -23,7 +26,7 @@ module.exports = {
     entry: './sample.js',
     target: 'node',
     resolve: {extensions: ['.js', '.json']},
-    externals: nodeModules,
+    externals: getModules,
     module: {
         loaders: [
             {
