@@ -9,9 +9,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ajv": "^4.11.6",
-    "ajv-pack": "^0.2.7",
     "loader-utils": "^1.0.3"
+  },
+  "peerDependencies": {
+    "ajv": "*",
+    "ajv-pack": "*"
   },
   "devDependencies": {
     "ava": "^0.19.1",
