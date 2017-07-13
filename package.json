@@ -9,16 +9,16 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "loader-utils": "^1.0.3"
+    "loader-utils": "^1.1.0"
   },
   "peerDependencies": {
     "ajv": "*",
     "ajv-pack": "*"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "eslint": "^3.19.0",
+    "ava": "^0.21.0",
+    "eslint": "^4.2.0",
     "eslint-plugin-no-console-log": "^2.0.0",
-    "webpack": "^2.3.3"
+    "webpack": "^3.2.0"
   }
 }
