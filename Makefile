@@ -7,14 +7,17 @@ bin          := $(node_modules)/.bin
 all:
 
 $(node_modules): package.json
+	yarn install --production=false
+
+.PHONY: peer_dependencies
+peer_dependencies:
 	jq -r                                                        \
 		'.peerDependencies|to_entries[]|"\(.key)@\(.value)"' \
 		package.json                                         \
 		| xargs -I{} npm install '{}'
-	yarn install --production=false
 
 .PHONY: test
-test: $(node_modules)
+test: $(node_modules) peer_dependencies
 	$(bin)/eslint .
 	$(bin)/webpack --config ./webpack.config.js
 	$(bin)/ava ./build/bundle.js
